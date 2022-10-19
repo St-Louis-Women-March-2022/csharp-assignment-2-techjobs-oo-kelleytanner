@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+
 namespace TechJobsOO
 {
     public class TechJob
     {
 
         public int Id { get; }
-        private static int nextId = 1;
+        public static int nextId = 1;
 
         public string Name { get; set; }
         public Employer EmployerName { get; set; }
@@ -53,7 +54,21 @@ namespace TechJobsOO
             return HashCode.Combine(Id, Name, EmployerName, EmployerLocation, JobType, JobCoreCompetency);
         }
 
+        public override string ToString()
+        {
+            string NaN = "Data not available";
+            if (Name == null || Name == "")
+            {
+                JobCoreCompetency.Value = NaN;
+            }
 
+            return Environment.NewLine + "ID: " + Id + Environment.NewLine +
+         "Name: " + Name + Environment.NewLine +
+         "Employer: " + EmployerName.Value + Environment.NewLine +
+         "Location: " + EmployerLocation.Value + Environment.NewLine +
+         "Position Type: " + JobType.Value + Environment.NewLine +
+         "Core Competency: " + JobCoreCompetency.Value + Environment.NewLine;
+        }
     }
 }
 
