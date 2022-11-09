@@ -16,7 +16,7 @@
 //    {
 //        //Task 5 Tests used to verify that students are testing their custom ToString method.  Uses jobs from the TechJobs class.  Tests are numbered.
 
-        
+
 //        [TestMethod]  //1
 //        public void TestToStringStartsAndEndsWithNewLineExists()
 //        {
@@ -60,7 +60,7 @@
 //            var output = stringWriter.ToString();
 
 //            //verify
-//           Assert.AreEqual(text, output, "New Line issue");
+//            Assert.AreEqual(text, output, "New Line issue");
 //        }
 
 
@@ -139,7 +139,7 @@
 //        [TestMethod] //6
 //        public void Test_TestToStringHandlesEmptyField()
 //        {
-//                        //setup
+//            //setup
 //            //comparing output to a text file.  id numbers may get a little wonky
 //            string text = System.IO.File.ReadAllText("EmptyFieldTest.txt").ToString();
 

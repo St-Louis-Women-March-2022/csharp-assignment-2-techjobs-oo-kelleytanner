@@ -21,10 +21,18 @@
     <None Remove="StartsAndEndsWithNewLine.txt" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="StartsAndEndsWithNewLine.txt" />
+    <Content Include="StartsAndEndsWithNewLine.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestTask5.cs" Condition=" '$(EnableDefaultCompileItems)' == 'true' ">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\TechJobsTest\TechJobsTest.csproj" />
     <ProjectReference Include="..\TechJobsOOAutograded\TechJobsOOAutograded.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="TestTask5.cs" />
   </ItemGroup>
 </Project>

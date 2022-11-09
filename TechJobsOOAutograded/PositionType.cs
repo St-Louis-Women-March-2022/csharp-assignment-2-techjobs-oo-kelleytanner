@@ -3,21 +3,21 @@ using TechJobsOOAutograded;
 
 namespace TechJobsOO
 {
-    public class PositionType
+    public class PositionType: JobField
     {
 
-        public int Id { get; }
-        public static int nextId = 1;
-        // changed nextId from private to public 
-        public string Value { get; set; }
+        //public int Id { get; }
+        //public static int nextId = 1;
+        //// changed nextId from private to public 
+        //public string Value { get; set; }
 
-        public PositionType()
-        {
-            Id = nextId;
-            nextId++;
-        }
+        //public PositionType() : base()
+        //{
+        //    //Id = nextId;
+        //    //nextId++;
+        //}
 
-        public PositionType(string value) : this()
+        public PositionType(string value) : base(value)
         {
             Value = value;
         }
