@@ -16,26 +16,25 @@ namespace TechJobsOOAutograded
             nextId++;
         }
 
-        public JobField(string value)
+        public JobField(string value) : this()
         {
             Value = value;
         }
 
         public override bool Equals(object obj)
         {
-            return obj is JobField jobField &&
-                Id == jobField.Id;
+            return base.Equals(obj);
 
         }
 
         public override int GetHashCode()
         {
-            return HashCode.Combine(Id);
+            return base.GetHashCode();
         }
 
         public override string ToString()
         {
-            return Value;
+            return base.ToString();
         }
     }
     }

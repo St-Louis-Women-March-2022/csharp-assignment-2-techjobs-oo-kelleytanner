@@ -8,8 +8,8 @@ namespace TechJobsOO
         //public int Id { get; }
         ////private static int nextId = 1; --change to public
         //public static int nextId = 1;
-        //public string Value { get; set; }
-
+        //public string Value { get; set; } 
+    
         //public Location() : base()
         //{
         //    //Id = nextId;
@@ -20,7 +20,7 @@ namespace TechJobsOO
 
         public Location(string value) : base(value)
         {
-            Value = value;
+            //Value = value;
         }
 
 

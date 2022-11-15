@@ -78,7 +78,7 @@ namespace TechJobsTest
         {
 
             techJob3.JobCoreCompetency.Value = "";
-            string expected = Environment.NewLine + "ID: " + techJob3.Id + Environment.NewLine + "Name: Data not available" + Environment.NewLine + "Employer: Data not available" + Environment.NewLine + "Location: Data not available" + Environment.NewLine + "Position Type: Data not available" + Environment.NewLine + "Core Competency: Data not available";
+            string expected = Environment.NewLine + "ID: " + techJob3.Id + Environment.NewLine + "Name: Data not available" + Environment.NewLine + "Employer: Data not available" + Environment.NewLine + "Location: Data not available" + Environment.NewLine + "Position Type: Data not available" + Environment.NewLine + "Core Competency: Data not available" + Environment.NewLine;
             string actual = techJob3.ToString();
             char text = actual[0];
             char lasttext = actual[actual.Length - 1];
@@ -94,11 +94,12 @@ namespace TechJobsTest
             Assert.AreEqual(expected, techJob3.ToString());
         }
 
+
         [TestMethod]
         public void TestToStringHandlesEmptyField()
         {
             techJob3.JobCoreCompetency.Value = "";
-            string expected = Environment.NewLine + "ID: " + techJob3.Id + Environment.NewLine + "Name: " + techJob3.Name + Environment.NewLine + "Employer: " + techJob3.EmployerName.Value + Environment.NewLine + "Location: " + techJob3.EmployerLocation.Value +  Environment.NewLine + "Position Type: " + techJob3.JobType.Value + Environment.NewLine + "Core Competency: " + techJob3.JobCoreCompetency.Value + Environment.NewLine;
+            string expected = Environment.NewLine + "ID: " + techJob3.Id + Environment.NewLine + "Name: " + techJob3.Name + Environment.NewLine + "Employer: " + techJob3.EmployerName.Value + Environment.NewLine + "Location: " + techJob3.EmployerLocation.Value + Environment.NewLine + "Position Type: " + techJob3.JobType.Value + Environment.NewLine + "Core Competency: " + techJob3.JobCoreCompetency.Value + Environment.NewLine;
 
             Assert.AreEqual(expected, techJob3.ToString());
         }

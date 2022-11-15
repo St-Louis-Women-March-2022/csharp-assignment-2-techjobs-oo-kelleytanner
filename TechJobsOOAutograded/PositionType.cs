@@ -19,7 +19,7 @@ namespace TechJobsOO
 
         public PositionType(string value) : base(value)
         {
-            Value = value;
+            //Value = value;
         }
 
         // TODO: Add custom Equals(), GetHashCode(), and ToString() methods.
