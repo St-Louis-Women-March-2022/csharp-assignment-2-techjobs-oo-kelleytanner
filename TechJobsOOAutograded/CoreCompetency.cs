@@ -3,40 +3,44 @@ using TechJobsOOAutograded;
 
 namespace TechJobsOO
 {
-    public class CoreCompetency
+    public class CoreCompetency : JobField
     {
 
-        private int id;
-        private static int nextId = 1;
-        private string value;
+        //private int id
+        //private static int nextId = 1;
+        //private string value;
+
+        //public int Id { get; }
+        //public static int nextId = 1;
+        //public string Value { get; set; }
 
         // TODO: Change the fields to auto-implemented properties.
+        //change id and value only
+        //public CoreCompetency()
+        //{
+        //    //Id = nextId;
+        //    //nextId++;
+        //}
 
-        public CoreCompetency()
+        public CoreCompetency(string value) : base(value)
         {
-            id = nextId;
-            nextId++;
-        }
-
-        public CoreCompetency(string v) : this()
-        {
-            value = v;
+            //Value = value;
         }
 
         public override bool Equals(object obj)
         {
             return obj is CoreCompetency competency &&
-                   id == competency.id;
+                   Id == competency.Id;
         }
 
         public override int GetHashCode()
         {
-            return HashCode.Combine(id);
+            return HashCode.Combine(Id);
         }
 
         public override string ToString()
         {
-            return value;
+            return Value;
         }
 
     }

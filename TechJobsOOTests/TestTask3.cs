@@ -12,7 +12,7 @@ namespace TechJobsOOTests
         //Testing the new Job class.  Tests are numbered.
 
         [TestMethod]    //1
-        public void Test_JobClass_Has_No_Arg_Constructor() 
+        public void Test_JobClass_Has_No_Arg_Constructor()
         {
             Type jobType = typeof(TechJob);
             ConstructorInfo[] constructorInfos = jobType.GetConstructors();
@@ -23,13 +23,13 @@ namespace TechJobsOOTests
             foreach (var name in constructorInfos)
             {
                 conNames.Add(name.ToString());
-                
+
             }
 
             foreach (string name in conNames)
             {
-               if( name.Equals("Void .ctor()"))
-               {
+                if (name.Equals("Void .ctor()"))
+                {
                     existsCheck += "No Arg Constructor";
                     break;
                 }
@@ -60,12 +60,12 @@ namespace TechJobsOOTests
             List<string> conNames = new List<string>();
             string nameCheck = "Second Constructor";
             string existsCheck = "";
-            
+
             foreach (var name in constructorInfos)
             {
                 conNames.Add(name.ToString());
             }
-            
+
             foreach (string name in conNames)
             {
                 if (name.Contains("Void .ctor(System.String, TechJobsOO.Employer,"))
@@ -88,7 +88,7 @@ namespace TechJobsOOTests
             TechJob testJob2 = new TechJob("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
 
             //verify 
-            Assert.AreEqual(testJob1.Name,  "Product tester", "Testing Job Name");
+            Assert.AreEqual(testJob1.Name, "Product tester", "Testing Job Name");
             Assert.AreEqual(testJob1.EmployerName.ToString(), "ACME", "Testing EmployerName Value");
             Assert.AreEqual(testJob1.EmployerLocation.ToString(), "Desert", "Testing EmployerLocation Value");
             Assert.AreEqual(testJob1.JobType.ToString(), "Quality control", "Testing JobType Value");
@@ -120,7 +120,7 @@ namespace TechJobsOOTests
             Assert.AreNotEqual(testJob1, testJob2, "Objects with different ID are not equal");
         }
 
-       
+
         [TestMethod]  //6
         public void Test_GetHashCode_Setup()
         {

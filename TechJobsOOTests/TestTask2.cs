@@ -12,11 +12,11 @@ namespace TechJobsOOTests
     public class TestTask2
     {
 
-    // Testing Location --------------------------------------------------------
+        // Testing Location --------------------------------------------------------
 
         [TestMethod] //1
         public void Test_Second_Location_Constructor_Exists()
-        { 
+        {
             Type locType = typeof(Location);
             ConstructorInfo[] constructorInfos = locType.GetConstructors();
             List<string> conNames = new List<string>();
@@ -76,11 +76,11 @@ namespace TechJobsOOTests
             CoreCompetency testComp = new CoreCompetency("Persistence");
             CoreCompetency testComp2 = new CoreCompetency("Persistence");
 
-            Type ccType = typeof(CoreCompetency); 
+            Type ccType = typeof(CoreCompetency);
             MemberInfo[] memberInfos = ccType.GetMembers();
             string nameCheck = "get_Id";
             string existsCheck = "";
-            
+
             foreach (var mCheck in memberInfos)
             {
                 if (mCheck.Name == nameCheck)
