@@ -57,9 +57,26 @@ namespace TechJobsOO
         public override string ToString()
         {
             string NaN = "Data not available";
+
             if (Name == null || Name == "")
+            { 
+            Name = NaN;
+            }
+            else if (EmployerName == null || EmployerName.ToString() == "")
             {
-                JobCoreCompetency.Value = NaN;
+            EmployerName.Value = NaN;
+            }
+            else if (EmployerLocation == null || EmployerLocation.ToString() == "")
+            {
+            EmployerLocation.Value = NaN;
+            }
+            else if (JobType == null || JobType.ToString() == "")
+            {
+            JobType.Value = NaN;
+            }
+            else if (JobCoreCompetency == null || JobCoreCompetency.ToString() == "")
+            {
+            JobCoreCompetency.Value = NaN;
             }
 
             return Environment.NewLine + "ID: " + Id + Environment.NewLine +

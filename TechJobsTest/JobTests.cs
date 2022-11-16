@@ -98,7 +98,7 @@ namespace TechJobsTest
         [TestMethod]
         public void TestToStringHandlesEmptyField()
         {
-            techJob3.JobCoreCompetency.Value = "";
+      
             string expected = Environment.NewLine + "ID: " + techJob3.Id + Environment.NewLine + "Name: " + techJob3.Name + Environment.NewLine + "Employer: " + techJob3.EmployerName.Value + Environment.NewLine + "Location: " + techJob3.EmployerLocation.Value + Environment.NewLine + "Position Type: " + techJob3.JobType.Value + Environment.NewLine + "Core Competency: " + techJob3.JobCoreCompetency.Value + Environment.NewLine;
 
             Assert.AreEqual(expected, techJob3.ToString());
